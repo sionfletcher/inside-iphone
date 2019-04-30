@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: contain;
+        }
+        body, html {
+            padding: 0;
+            margin: 0;
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <video>
+        <source src="/videos/instructions.mp4" />
+    </video>
+</body>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io.connect('');
+    socket.on('hit', function (data) {
+        console.log(data);
+    });
+</script>
